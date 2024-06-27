@@ -1,0 +1,77 @@
+{
+    "allBeers": [
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440000",
+        "name": "Pilsner Urquell",
+        "type": "Pilsner",
+        "price": 3,
+        "image": "http://localhost:3000/assets/pilsner-urquell.webp",
+        "rating": 5
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440001",
+        "name": "Guinness",
+        "type": "Stout",
+        "price": 4,
+        "image": "http://localhost:3000/assets/guinness.webp",
+        "rating": 4
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440002",
+        "name": "Sierra Nevada Pale Ale",
+        "type": "Pale Ale",
+        "price": 5,
+        "image": "http://localhost:3000/assets/sierra-nevada-pale-ale.webp",
+        "rating": 5
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440003",
+        "name": "Hoegaarden",
+        "type": "Witbier",
+        "price": 4,
+        "image": "http://localhost:3000/assets/hoegaarden.webp",
+        "rating": 4
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440004",
+        "name": "Duvel",
+        "type": "Belgian Strong Ale",
+        "price": 6,
+        "image": "http://localhost:3000/assets/duvel.webp",
+        "rating": 5
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440005",
+        "name": "Heineken",
+        "type": "Lager",
+        "price": 3,
+        "image": "http://localhost:3000/assets/heineken.webp",
+        "rating": 3
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440006",
+        "name": "Stella Artois",
+        "type": "Lager",
+        "price": 4.5,
+        "image": "http://localhost:3000/assets/stella-artois.webp",
+        "rating": 4
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440007",
+        "name": "Chimay Blue",
+        "type": "Trappist Ale",
+        "price": 10,
+        "image": "http://localhost:3000/assets/chimay-blue.webp",
+        "rating": 5
+      },
+      {
+        "id": "550e8400-e29b-41d4-a716-446655440008",
+        "name": "Samuel Adams Boston Lager",
+        "type": "Amber Lager",
+        "price": 5.5,
+        "image": "http://localhost:3000/assets/samuel-adams-boston-lager.webp",
+        "rating": 4
+      }
+    ]
+  }
+  

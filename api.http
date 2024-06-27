@@ -1,0 +1,31 @@
+### get all beers
+GET http://localhost:3000/beers
+
+### get a beer by id
+GET http://localhost:3000/beers/89d7850f-1300-464e-bf69-026f6d97ca31
+
+### get beer by type
+GET http://localhost:3000/beers?type=ale
+
+### get beer by name 
+GET http://localhost:3000/beers?name=Heineken
+
+### create a beer
+
+POST http://localhost:3000/beers
+Content-Type: application/json
+
+{
+    "name": "Budweiser",
+    "type": "lager",
+    "price": 17.99,
+    "image": "https://www.dispedisa.com/wp-content/uploads/2021/07/cerveza-Budweiser-america-arroz-doble-fermentacion.png"
+}
+
+### update a beer
+PATCH http://localhost:3000/beers/9dd52121-c5ec-49b8-a8a3-fc1ce12cc970
+Content-Type: application/json
+
+{
+    "price": 15.99
+}

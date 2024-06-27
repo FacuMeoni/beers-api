@@ -1,0 +1,24 @@
+{
+  "name": "beers-api",
+  "version": "1.0.0",
+  "description": "A simple API test, with express, zod, cors, and nodemon. You can GET, PATCH, POST, DELETE, and PUT beers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "beers",
+    "API"
+  ],
+  "author": "Facundo Meoni",
+  "license": "ISC",
+  "devDependencies":{ 
+    "nodemon": "^3.1.3"
+  },
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "4.19.2",
+    "zod": "3.23.8"
+  }
+}
