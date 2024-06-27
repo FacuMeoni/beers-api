@@ -29,3 +29,8 @@ Content-Type: application/json
 {
     "price": 15.99
 }
+
+
+### Delete a beer
+
+DELETE http://localhost:3000/beers/ba9ea04e-3645-4624-8522-84260e1142db

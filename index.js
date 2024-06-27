@@ -106,6 +106,17 @@ app.patch('/beers/:id', (req, res ) => {
     res.status(200).json({ message: "Beer updated successfully" });
 })
 
+app.delete('/beers/:id', (req, res) => {
+  const { id } = req.params;
+  const beerIndex = allBeers.findIndex(beer => beer.id === id);
+
+  if(beerIndex === -1) return res.status(404).json({ error: "Beer not found" });
+
+  allBeers.splice(beerIndex, 1);
+
+  res.status(200).json({ message: "Beers deleted successfully"})
+})
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
