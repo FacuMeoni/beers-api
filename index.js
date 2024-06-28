@@ -7,6 +7,7 @@ const { allBeers } = require('./beers.json');
 const formatText = (text) => text.toLowerCase().replace(/\s+/g, '');
 
 app.use(express.json());
+app.disable('x-powered-by');
 app.use(cors({
   origin: (origin, callback) => {
     const acceptedOrigins = ['http://localhost:3001', 'http://localhost:8080']
