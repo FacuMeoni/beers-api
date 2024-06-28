@@ -5,7 +5,7 @@
         "name": "Pilsner Urquell",
         "type": "Pilsner",
         "price": 3,
-        "image": "http://localhost:3000/assets/pilsner-urquell.webp",
+        "image": "https://boeningbrothers.com/wp-content/uploads/2018/03/pilsner_Urquell500.jpg",
         "rating": 5
       },
       {
@@ -13,7 +13,7 @@
         "name": "Guinness",
         "type": "Stout",
         "price": 4,
-        "image": "http://localhost:3000/assets/guinness.webp",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzSlU_HZWjayIYsXuXddQt3zdSkO_Qqm8F-g&s",
         "rating": 4
       },
       {
@@ -21,7 +21,7 @@
         "name": "Sierra Nevada Pale Ale",
         "type": "Pale Ale",
         "price": 5,
-        "image": "http://localhost:3000/assets/sierra-nevada-pale-ale.webp",
+        "image": "https://static.wixstatic.com/media/733e93_9003614175214ac7b43714dc07ea6ea1~mv2.jpg/v1/fill/w_498%2Ch_498%2Cal_c%2Cq_90/file.jpg",
         "rating": 5
       },
       {
@@ -29,7 +29,7 @@
         "name": "Hoegaarden",
         "type": "Witbier",
         "price": 4,
-        "image": "http://localhost:3000/assets/hoegaarden.webp",
+        "image": "https://dcdn.mitiendanube.com/stores/020/058/products/757b580a-12a5-4282-9859-795b636539fb1-9ba2df882756be396b16882650694618-640-0.jpeg",
         "rating": 4
       },
       {
@@ -37,7 +37,7 @@
         "name": "Duvel",
         "type": "Belgian Strong Ale",
         "price": 6,
-        "image": "http://localhost:3000/assets/duvel.webp",
+        "image": "https://jumboargentina.vtexassets.com/arquivos/ids/480848/Cerveza-Duvel-85--Botella-X-330-Ml-1-79887.jpg?v=636717162284770000",
         "rating": 5
       },
       {
@@ -45,7 +45,7 @@
         "name": "Heineken",
         "type": "Lager",
         "price": 3,
-        "image": "http://localhost:3000/assets/heineken.webp",
+        "image": "https://masonlineprod.vtexassets.com/arquivos/ids/310648/Cerveza-Heineken-150-A-os-330-Ml-1-52365.jpg?v=638386293763870000",
         "rating": 3
       },
       {
@@ -53,7 +53,7 @@
         "name": "Stella Artois",
         "type": "Lager",
         "price": 4.5,
-        "image": "http://localhost:3000/assets/stella-artois.webp",
+        "image": "https://lasalasdc.com/wp-content/uploads/2022/05/CervezaStellaArtois.png",
         "rating": 4
       },
       {
@@ -61,7 +61,7 @@
         "name": "Chimay Blue",
         "type": "Trappist Ale",
         "price": 10,
-        "image": "http://localhost:3000/assets/chimay-blue.webp",
+        "image": "https://cdn.shopify.com/s/files/1/1351/8119/files/chimay-blue_1000x1000_crop_center.jpg?v=1709861479",
         "rating": 5
       },
       {
@@ -69,9 +69,35 @@
         "name": "Samuel Adams Boston Lager",
         "type": "Amber Lager",
         "price": 5.5,
-        "image": "http://localhost:3000/assets/samuel-adams-boston-lager.webp",
+        "image": "https://d22fxaf9t8d39k.cloudfront.net/2706868c5b4cee951086c4176c71807773578bb2b980546b8cfda64fe6dd9a6f50685.jpg",
         "rating": 4
+      },
+      {
+        "id": "1e8b9a6e-82b2-4d6d-9c34-ef2f1e1d2b21",
+        "name": "Dos Equis XX",
+        "type": "Lager",
+        "price": 17.50,
+        "image": "https://i0.wp.com/mrvolk.com.mx/wp-content/uploads/2020/12/2651.jpg?fit=1000%2C1000&ssl=1",
+        "rating": 4
+      },
+      {
+        "id": "a4b0d6b4-7c3b-4eaa-8411-27db1e2b4f63",
+        "name" : "Patagonia Vera IPA",
+        "type" : "India Pale Ale",
+        "price": 2,
+        "image":"https://carrefourar.vtexassets.com/arquivos/ids/268905-1600-auto?v=638074041350930000&width=1600&height=auto&aspect=true",
+        "rating": 5
+      },
+      {
+        "id": "e4f5a6b7-3c4d-5e6f-7a8b-8c9d0e1f2a3b",
+        "name" : "Schöferhoffer",
+        "type" : "Hefeweizen",
+        "price": 3,
+        "image" : "https://tendenciasgourmet.cl/cdn/shop/files/4c1a3d2d-9060-4b43-a505-1c0225cad19d-cerveza-schoferhoffer-hefeweizen-botella-500-cc_grande_3888c430-586c-4a5a-946a-95ee9c136de1.jpg?v=1717511670",
+        "rating" : 2
       }
+
+      
     ]
-  }
+}
   

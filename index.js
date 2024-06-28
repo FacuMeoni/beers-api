@@ -7,8 +7,14 @@ const { allBeers } = require('./beers.json');
 const formatText = (text) => text.toLowerCase().replace(/\s+/g, '');
 
 app.use(express.json());
-app.use('/assets', express.static('assets'));
-app.use(cors());
+app.use(cors({
+  origin: (origin, callback) => {
+    const acceptedOrigins = ['http://localhost:3001', 'http://localhost:8080']
+    if(!origin || acceptedOrigins.includes(origin)){
+      return callback(null, true);
+    } else return callback(new Error('Not allowed by CORS'));
+  }
+}));
 
 app.get('/', (req, res) => {
     res.send(`
@@ -20,6 +26,7 @@ app.get('/', (req, res) => {
           line-height: 1.5;
           padding: 20px;
           margin: 0 auto;
+          max-width: 600px;
         }
         ul {
           display: flex;
@@ -27,18 +34,22 @@ app.get('/', (req, res) => {
           flex-direction: column;
           gap:10px;
         }
+
+        h2 {
+        font-weight: 500;
+        margin: 0;
+        }
       </style>
     </head>
     <body>
-      <h1>Welcome to the Beer API by Facundo Meoni</h1>
-      <p>Endpoints:</p>
+      <h1>Welcome to the Beers API</h1>
+      
+      <h2>Endpoints</h2>
       <ul>
-        <li> Get all beers: <code>/beers</code></li>
-        <li> Get beer by ID: <code>/beers/:id</code></li>
-        <li> Get beer by name: <code>/beers?name=beerName</code></li>
-        <li> Get beer by type: <code>/beers?type=beerType</code></li>
-        <li> Add a new beer: <code>POST /beers</code> (body: {name, type, price, rating, image})</li>
-        <li> Update a beer: <code>PATCH /beers/:id</code> (body: updated fields)</li>
+        <li>/beers</li>
+        <li>/beers?name=</li>
+        <li>/beers?type=</li>
+        <li>/beers/:id</li>
       </ul>
     </body>
     </html>
@@ -117,7 +128,8 @@ app.delete('/beers/:id', (req, res) => {
   res.status(200).json({ message: "Beers deleted successfully"})
 })
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT ?? 3000;
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
-});
+}); 
