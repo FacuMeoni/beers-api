@@ -34,5 +34,14 @@ pnpm dev
 - [Zod](https://zod.dev/)
 - [Nodemon](https://nodemon.io/)
 
+  
+
+> [!WARNING]
+> If you are experimenting a CORS error with "Access-Control-Allow-Origin", add your host to the accepted origins:
+> ![carbon](https://github.com/FacuMeoni/beers-api/assets/122312072/2cbe94c5-128a-4578-a008-b017c4e52801)
+
+
+
+  
 
 Enjoy it! 😁
