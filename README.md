@@ -37,6 +37,7 @@ pnpm dev
 
 > [!WARNING]
 > If you are experimenting a CORS error with "Access-Control-Allow-Origin", add your host to the accepted origins:
-> ![carbon](https://github.com/FacuMeoni/beers-api/assets/122312072/2cbe94c5-128a-4578-a008-b017c4e52801)
+>![carbon](https://github.com/FacuMeoni/beers-api/assets/122312072/1ca4d9a7-d2d7-4e10-858a-3311cd97db9f)
+
 
 Enjoy it! 😁
