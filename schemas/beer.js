@@ -1,4 +1,4 @@
-const z = require('zod')
+import z  from 'zod';
 
 const beerSchema = z.object({
     name: z.string({
@@ -16,13 +16,10 @@ const beerSchema = z.object({
     rating: z.number().int().min(0).max(5).default(0),
 })
 
-function validateBeer (beer) {
+export const validateBeer = (beer) => {
     return beerSchema.safeParse(beer)
 }
 
-function partialValidateBeer (beer) {
+export const partialValidateBeer = (beer)  => {
     return beerSchema.partial().safeParse(beer)
 }
-
-
-module.exports = { validateBeer, partialValidateBeer }

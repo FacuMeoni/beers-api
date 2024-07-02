@@ -1,21 +1,11 @@
-const express = require('express');
-const app = express();
-const cors = require('cors');
-const { validateBeer, partialValidateBeer } = require('./schemas/beer.js');
-const { randomUUID } = require('crypto');
-const { allBeers } = require('./beers.json');
-const formatText = (text) => text.toLowerCase().replace(/\s+/g, '');
+import express, { json } from 'express';
+import { beersRouter } from './routes/beers.js';
+import { corsMiddleware } from './middlewares/cors.js';
 
-app.use(express.json());
-app.disable('x-powered-by');
-app.use(cors({
-  origin: (origin, callback) => {
-    const acceptedOrigins = ['http://localhost:3001', 'http://localhost:8080']
-    if(!origin || acceptedOrigins.includes(origin)){
-      return callback(null, true);
-    } else return callback(new Error('Not allowed by CORS'));
-  }
-}));
+const app = express();
+app.use(json());
+app.disable('x-powered-by'); 
+app.use(corsMiddleware());
 
 app.get('/', (req, res) => {
     res.send(`
@@ -58,76 +48,7 @@ app.get('/', (req, res) => {
     `);
 })
 
-app.get('/beers', (req, res) => {
-
-    const { name, type } = req.query;
-
-    if (name) {
-        const beer = allBeers.filter(beer => formatText(beer.name).includes(formatText(name)));
-        if (!beer.length) return res.status(404).json({ error: "Beer not found"});
-
-        return res.json(beer);
-    } 
-    if (type) {
-        const filteredBeers = allBeers.filter(beer => formatText(beer.type).includes(formatText(type)));
-        if (!filteredBeers.length) return res.status(404).json({ error: "Beers's type not found"});
-        return res.json(filteredBeers);
-    }
-
-    res.json(allBeers)
-});
-
-app.get('/beers/:id', (req, res) => {
-    const { id } = req.params;
-    const beer = allBeers.find(beer => beer.id === id);
-    if (!beer) return res.status(404).json({ message: 'Beer not found' });
-
-    return res.json(beer);
-});
-
-app.post('/beers', (req, res) => {
-    const beer = req.body
-
-    const { data, error } = validateBeer(beer);
-    
-    if(error) return res.status(400).json({ error: error.errors });
-
-    allBeers.push({
-        id: randomUUID(),
-        ...data
-    });
-
-    return res.status(201).json({ message: "Beer added successfully" });
-})
-
-app.patch('/beers/:id', (req, res ) => {
-   const { id } = req.params;
-   const beerIndex = allBeers.findIndex(beer => beer.id === id);
-   if (beerIndex === -1) return res.status(404).json({ error : "Beer not found" });
-
-   const validateBeer = partialValidateBeer(req.body);
-    if(validateBeer.error) return res.status(400).json({ error: validateBeer.error.errors });
-
-    allBeers[beerIndex] = {
-        ...allBeers[beerIndex],
-        ...validateBeer.data
-    }
-
-    console.log(validateBeer.data);
-
-    res.status(200).json({ message: "Beer updated successfully" });
-})
-
-app.delete('/beers/:id', (req, res) => {
-  const { id } = req.params;
-  const beerIndex = allBeers.findIndex(beer => beer.id === id);
-
-  if(beerIndex === -1) return res.status(404).json({ error: "Beer not found" });
-
-  allBeers.splice(beerIndex, 1);
-
-  res.status(200).json({ message: "Beers deleted successfully"})
-})
+app.use('/beers', beersRouter);
 
 const PORT = process.env.PORT ?? 3000;
 

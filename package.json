@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A simple API test, with express, zod, cors, and nodemon. You can GET, PATCH, POST, DELETE, and PUT beers.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js"

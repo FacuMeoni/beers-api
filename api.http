@@ -2,13 +2,13 @@
 GET http://localhost:3000/beers
 
 ### get a beer by id
-GET http://localhost:3000/beers/89d7850f-1300-464e-bf69-026f6d97ca31
+GET http://localhost:3000/beers/550e8400-e29b-41d4-a716-446655440000
 
 ### get beer by type
 GET http://localhost:3000/beers?type=ale
 
 ### get beer by name 
-GET http://localhost:3000/beers?name=Heineken
+GET http://localhost:3000/beers?name=Budweiser
 
 ### create a beer
 
@@ -23,7 +23,7 @@ Content-Type: application/json
 }
 
 ### update a beer
-PATCH http://localhost:3000/beers/9dd52121-c5ec-49b8-a8a3-fc1ce12cc970
+PATCH http://localhost:3000/beers/b4c4f127-519b-4002-bb83-9cac2b495bf2
 Content-Type: application/json
 
 {
@@ -33,4 +33,4 @@ Content-Type: application/json
 
 ### Delete a beer
 
-DELETE http://localhost:3000/beers/ba9ea04e-3645-4624-8522-84260e1142db
+DELETE http://localhost:3000/beers/4dc67abc-c89e-430a-a8db-1d83231f51b5
